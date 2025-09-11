@@ -1,29 +1,12 @@
 const express = require("express");
-const PORT = 3000;
-
 const app = express();
+const PORT = 3000;
+const { initDB } = require("./db");
+const itemsRouter = require("./routes/items");
+
 app.use(express.json());
+app.use("/items", itemsRouter);
 
-
-let marketList = [
-{id:1,name:"ekmek",quantity:3},
-{id:2,name:"su",quantity:2}
-];
-
-
-app.get("/",(req,res)=>{
-    res.send("Market List is Here")
-
-})
-
-app.post("/additem",(req,res)=>{
-
-})
-
-
-
-
-
-
-
-app.listen(PORT,()=> console.log(`Server running on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
