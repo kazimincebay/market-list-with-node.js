@@ -1,14 +1,3 @@
 {
-  "items": [
-    {
-      "id": 1,
-      "name": "su",
-      "quantity": 2
-    },
-    {
-      "id": 2,
-      "name": "Ekmek",
-      "quantity": 2
-    }
-  ]
+  "items": []
 }
